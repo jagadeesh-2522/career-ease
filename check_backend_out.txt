@@ -1,0 +1,23 @@
+[Lumino backend] listening on http://localhost:4000
+[Lumino backend] ⚠ SUPABASE_URL not configured
+[Lumino backend] ⚠ SUPABASE_SERVICE_ROLE_KEY not configured
+[Lumino backend] ⚠ GEMINI_API_KEY not configured
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed
+[Error] CORS: origin http://localhost:5174 not allowed

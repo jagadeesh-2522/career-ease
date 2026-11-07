@@ -1,0 +1,316 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════
+   LUMINO DESIGN TOKENS
+   ═══════════════════════════════════════════════════════════════════ */
+@theme {
+  /* ── Brand palette ─────────────────────────────── */
+  --color-blush:        #F8DCE5;
+  --color-rose:         #E99BB5;
+  --color-peach:        #F6B99F;
+  --color-coral:        #D96D94;
+  --color-lavender:     #E5D9FA;
+  --color-soft-purple:  #BCA5E8;
+  --color-lilac:        #896BC5;
+  --color-plum:         #594477;
+  --color-deep-plum:    #3D2E52;
+  --color-charcoal:     #2A2035;
+  --color-ink:          #1A1325;
+  /* ── Supporting accents (inspired by IMAGE 3) ─── */
+  --color-sky:          #5B9BD5;
+  --color-teal:         #2EC4B6;
+  --color-mint:         #A8E6CF;
+
+  /* ── Typography ────────────────────────────────── */
+  --font-sans:    "Poppins", system-ui, sans-serif;
+  --font-heading: "Poppins", system-ui, sans-serif;
+
+  /* ── Radii ──────────────────────────────────────── */
+  --radius-card: 1rem;
+  --radius-btn:  0.75rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LIGHT THEME
+   Background: vivid blush-lavender-peach-sky gradient
+   Glass cards: translucent white so gradient shows through
+   ═══════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: light;
+
+  /* ── Background stops (painted in AppLayout) ─── */
+  --bg-grad-a: #e8c8f0;   /* soft violet-blush  */
+  --bg-grad-b: #d4b8f0;   /* lavender           */
+  --bg-grad-c: #c9d4f8;   /* periwinkle-blue    */
+  --bg-grad-d: #c8edf0;   /* sky-teal           */
+
+  /* ── Radial blob colours ────────────────────── */
+  --blob-1: rgba(217, 109, 148, 0.45);   /* rose      */
+  --blob-2: rgba(137, 107, 197, 0.38);   /* lilac     */
+  --blob-3: rgba(91,  155, 213, 0.32);   /* sky blue  */
+  --blob-4: rgba(46,  196, 182, 0.28);   /* teal      */
+  --blob-5: rgba(246, 185, 159, 0.35);   /* peach     */
+
+  /* ── Sidebar own gradient ──────────────────── */
+  --sidebar-grad-a: rgba(120,  85, 190, 0.82);
+  --sidebar-grad-b: rgba( 80,  50, 155, 0.90);
+  --sidebar-grad-c: rgba( 55,  30, 120, 0.95);
+
+  /* ── Glass surfaces ─────────────────────────── */
+  --bg-card:        rgba(255, 255, 255, 0.45);
+  --bg-surface:     rgba(255, 255, 255, 0.60);
+  --bg-surface-2:   rgba(255, 255, 255, 0.35);
+  --bg-hover:       rgba(255, 255, 255, 0.18);
+  --bg-active-nav:  rgba(255, 255, 255, 0.28);
+
+  /* ── Borders ────────────────────────────────── */
+  --border-card:    rgba(255, 255, 255, 0.65);
+  --border-subtle:  rgba(255, 255, 255, 0.30);
+  --border-glow:    rgba(137, 107, 197, 0.55);
+
+  /* ── Text ───────────────────────────────────── */
+  --text-primary:   #26184a;
+  --text-secondary: #5a4075;
+  --text-muted:     #8e72a8;
+  --text-sidebar:   rgba(255, 255, 255, 0.90);
+  --text-sidebar-muted: rgba(255, 255, 255, 0.60);
+
+  /* ── Shadows ────────────────────────────────── */
+  --shadow-card:     0 8px 32px rgba(89, 68, 119, 0.18), 0 2px 8px rgba(89, 68, 119, 0.10);
+  --shadow-sidebar:  6px 0 48px rgba(40, 20, 90, 0.30);
+  --shadow-elevated: 0 16px 56px rgba(89, 68, 119, 0.28);
+  --shadow-metric:   0 6px 24px rgba(89, 68, 119, 0.15);
+
+  /* ── Blur ───────────────────────────────────── */
+  --blur-glass:   blur(20px);
+  --blur-sidebar: blur(32px);
+
+  /* ── Metric card icon gradients (4 cards) ─── */
+  --m1-grad:  linear-gradient(135deg, #D96D94 0%, #E99BB5 100%);  /* rose/pink   */
+  --m1-shadow: rgba(217, 109, 148, 0.50);
+  --m2-grad:  linear-gradient(135deg, #F6814A 0%, #F6B99F 100%);  /* coral/peach */
+  --m2-shadow: rgba(246, 129,  74, 0.45);
+  --m3-grad:  linear-gradient(135deg, #896BC5 0%, #BCA5E8 100%);  /* lilac/lav   */
+  --m3-shadow: rgba(137, 107, 197, 0.50);
+  --m4-grad:  linear-gradient(135deg, #2196C4 0%, #2EC4B6 100%);  /* sky/teal    */
+  --m4-shadow: rgba(33, 150, 196, 0.50);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DARK THEME
+   Background: deep plum base with vivid multi-colour radial glows
+   Glass cards: translucent dark so glows bleed through
+   ═══════════════════════════════════════════════════════════════════ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ── Background stops ───────────────────────── */
+  --bg-grad-a: #1a0e2e;
+  --bg-grad-b: #190e3a;
+  --bg-grad-c: #0e1535;
+  --bg-grad-d: #091825;
+
+  /* ── Radial blob colours ────────────────────── */
+  --blob-1: rgba(217, 109, 148, 0.38);
+  --blob-2: rgba(137, 107, 197, 0.35);
+  --blob-3: rgba(91,  155, 213, 0.28);
+  --blob-4: rgba(46,  196, 182, 0.22);
+  --blob-5: rgba(246, 185, 159, 0.22);
+
+  /* ── Sidebar own gradient ───────────────────── */
+  --sidebar-grad-a: rgba( 68,  40, 110, 0.88);
+  --sidebar-grad-b: rgba( 45,  25,  85, 0.94);
+  --sidebar-grad-c: rgba( 28,  14,  55, 0.98);
+
+  /* ── Glass surfaces ─────────────────────────── */
+  --bg-card:        rgba(55, 30, 90, 0.52);
+  --bg-surface:     rgba(65, 38, 105, 0.62);
+  --bg-surface-2:   rgba(48, 26, 78, 0.45);
+  --bg-hover:       rgba(255, 255, 255, 0.07);
+  --bg-active-nav:  rgba(255, 255, 255, 0.18);
+
+  /* ── Borders ─────────────────────────────────── */
+  --border-card:    rgba(188, 165, 232, 0.22);
+  --border-subtle:  rgba(188, 165, 232, 0.14);
+  --border-glow:    rgba(217, 109, 148, 0.45);
+
+  /* ── Text ───────────────────────────────────── */
+  --text-primary:   #efe8ff;
+  --text-secondary: #c0a8e0;
+  --text-muted:     #7a5e98;
+  --text-sidebar:   rgba(255, 255, 255, 0.92);
+  --text-sidebar-muted: rgba(255, 255, 255, 0.55);
+
+  /* ── Shadows ─────────────────────────────────── */
+  --shadow-card:     0 8px 40px rgba(0, 0, 0, 0.50), 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-sidebar:  6px 0 48px rgba(0, 0, 0, 0.50);
+  --shadow-elevated: 0 16px 56px rgba(0, 0, 0, 0.65);
+  --shadow-metric:   0 6px 24px rgba(0, 0, 0, 0.40);
+
+  /* ── Blur ───────────────────────────────────── */
+  --blur-glass:   blur(22px);
+  --blur-sidebar: blur(36px);
+
+  /* ── Metric card icon gradients ─────────────── */
+  --m1-grad:  linear-gradient(135deg, #C1547A 0%, #E99BB5 100%);
+  --m1-shadow: rgba(193, 84, 122, 0.55);
+  --m2-grad:  linear-gradient(135deg, #D4601A 0%, #F6B99F 100%);
+  --m2-shadow: rgba(212, 96,  26, 0.50);
+  --m3-grad:  linear-gradient(135deg, #6B4FA8 0%, #BCA5E8 100%);
+  --m3-shadow: rgba(107, 79, 168, 0.55);
+  --m4-grad:  linear-gradient(135deg, #1778A8 0%, #2EC4B6 100%);
+  --m4-shadow: rgba(23, 120, 168, 0.55);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   BASE RESET
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #1a0e2e;   /* flash-of-dark fallback */
+  color: var(--text-primary);
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+/* Light-theme body fallback so there's no purple flash */
+:root body { background: #e8c8f0; }
+
+#root { min-height: 100svh; display: flex; flex-direction: column; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar            { width: 4px; height: 4px; }
+::-webkit-scrollbar-track      { background: transparent; }
+::-webkit-scrollbar-thumb      { background: rgba(137,107,197,0.35); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover{ background: rgba(137,107,197,0.65); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   GLASS UTILITIES
+   A glass panel needs:
+   1. Semi-transparent background     → --bg-card
+   2. Backdrop filter                 → blurs the gradient behind it
+   3. Bright top-edge highlight       → ::before shimmer line
+   4. Visible border                  → --border-card
+   ═══════════════════════════════════════════════════════════════════ */
+.glass {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* Top-edge shimmer — the signature glassmorphism highlight */
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.60) 40%,
+    rgba(255,255,255,0.80) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left-edge shimmer */
+.glass::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.50) 0%,
+    rgba(255,255,255,0.15) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Sidebar glass — its own gradient background, not the app bg ── */
+.glass-sidebar {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--sidebar-grad-a) 0%,
+    var(--sidebar-grad-b) 50%,
+    var(--sidebar-grad-c) 100%
+  );
+  backdrop-filter: var(--blur-sidebar);
+  -webkit-backdrop-filter: var(--blur-sidebar);
+  border-right: 1px solid rgba(255,255,255,0.15);
+  box-shadow: var(--shadow-sidebar);
+}
+
+/* Sidebar right-edge highlight */
+.glass-sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.35) 0%,
+    rgba(255,255,255,0.12) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   FOCUS RING
+   ═══════════════════════════════════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid #896BC5;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   METRIC CARD ICON CONTAINERS
+   ═══════════════════════════════════════════════════════════════════ */
+.metric-icon-1 {
+  background: var(--m1-grad);
+  box-shadow: 0 4px 16px var(--m1-shadow);
+}
+.metric-icon-2 {
+  background: var(--m2-grad);
+  box-shadow: 0 4px 16px var(--m2-shadow);
+}
+.metric-icon-3 {
+  background: var(--m3-grad);
+  box-shadow: 0 4px 16px var(--m3-shadow);
+}
+.metric-icon-4 {
+  background: var(--m4-grad);
+  box-shadow: 0 4px 16px var(--m4-shadow);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   TYPOGRAPHY HELPERS
+   ═══════════════════════════════════════════════════════════════════ */
+.label-caps {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
