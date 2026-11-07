@@ -1,4 +1,53 @@
-node_modules
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables - NEVER commit secrets
 .env
+.env.local
+.env.*.local
+
+# Logs
+logs/
 *.log
-dist
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build and distribution
+dist/
+build/
+out/
+
+# Runtime and temporary files
+tmp/
+temp/
+*.tmp
+*.pid
+
+# IDE and editor files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.directory
+.env.production
+
+# Uploaded files and temporary storage (if applicable)
+uploads/
+tmp/
+temp/

@@ -1,0 +1,31 @@
+# Root-level .gitignore for Career Ease project
+# Inherited by subdirectories (frontend/ and backend/)
+
+# Temporary and log files at root
+*.log
+*.txt
+*.bat
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files (should be in frontend/ and backend/ but included for safety)
+.env
+.env.local
+.env.*.local
+
+# Artifacts
+/check_backend_out.txt
+/copy_log.txt
+/copy_logo.bat
