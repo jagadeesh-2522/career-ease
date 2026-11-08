@@ -388,38 +388,7 @@ After setup, test a sign-up:
 
 ---
 
-## 📸 Screenshots
 
-> 🎨 Screenshots will be added as the project develops. Placeholder sections below describe key screens:
-
-### Login & Registration
-![Placeholder: Login Page](https://via.placeholder.com/600x400?text=Login+Page)
-- Email and password authentication
-- Google OAuth integration
-- Password recovery and reset flows
-
-### Dashboard
-![Placeholder: Dashboard](https://via.placeholder.com/600x400?text=Dashboard)
-- Welcome banner with personalized greeting
-- Metric cards showing Resume Score and Interview Performance
-- Activity chart tracking engagement
-- Quick navigation to main features
-
-### Resume Analysis
-![Placeholder: Resume Upload](https://via.placeholder.com/600x400?text=Resume+Upload)
-- Drag-and-drop file upload
-- Support for PDF and DOCX formats
-- AI-generated analysis with detailed feedback
-- Resume version history
-
-### Mock Interview
-![Placeholder: Interview Chat](https://via.placeholder.com/600x400?text=Interview+Chat)
-- Real-time conversational interface
-- Voice input and audio output
-- Interview guidance and tips
-- Conversation history
-
----
 
 ## 🎯 Future Enhancements
 
@@ -540,15 +509,6 @@ This is a college project showcasing full-stack development capabilities. Contri
 ## 📄 License
 
 This project is open source and available under the **MIT License**. See the LICENSE file for details.
-
----
-
-## 📞 Support & Contact
-
-For questions, issues, or suggestions:
-- Open an [issue on GitHub](https://github.com/YOUR_USERNAME/career-ease/issues)
-- Check the **Help** section in the application
-- Review existing documentation in this README
 
 ---
 
