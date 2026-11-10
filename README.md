@@ -520,6 +520,8 @@ This project is open source and available under the **MIT License**. See the LIC
 - **Tailwind CSS** – Utility-first styling framework
 - **Open source community** – For amazing libraries and tools
 
+PPT LINK : https://eu.wps.com/cms/docs/d/cbOamc45qIIC47N0?sa=601.1074&refer=copylink
+
 ---
 
 **Built with ❤️ for career development and growth**
